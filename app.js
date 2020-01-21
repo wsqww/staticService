@@ -14,7 +14,9 @@ const devPrefix = '/dapi';
 // 由js控制路由，一定要写在express.static前面！！！
 app.use('/', connectHistoryApiFallback());
 //此处设置静态文件的路径
-const basePath = path.resolve('./assets/joycloud/');
+// const basePath = path.resolve('./assets/joycloud/');
+const basePath = '/Applications/MAMP/htdocs/ATA/cloud-front/joycloud/dist/joycloud';
+console.log(basePath);
 app.use(express.static(basePath));
 
 // proxy
